@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to KMS</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+      }
+      a {
+        color: #98bf78;
+        text-decoration: none;
+        margin: 10px 0;
+      }
+      a:hover {
+        color: grey;
+      }
+      h1 {
+        color: #98bf78;
+        font-size: 50px;
+        margin: 50px;
+        margin-bottom: 20px;
+      }
+      .nav {
+        /* display: flex; */
+        position: fixed;
+        /* flex-direction: row; */
+        /* position: relative; */
+        /* justify-content: flex-start; */
+        align-items: center;
+        margin: 0;
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        border-bottom: 3px solid white;
+        box-shadow: 0 0 5px grey;
+        color: #98bf78;
+      }
+      .nav-left {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        /* justify-content: flex-start; */
+        align-items: center;
+        /* margin:0 10px; */
+        left: 100px;
+        top: 5px;
+      }
+      .nav-right {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        /* justify-content: flex-start; */
+        align-items: center;
+        right: 50px;
+        top: 8px;
+      }
+      .img-icon {
+        height: 20px;
+        width: 20px;
+        padding: 0 10px;
+      }
+      .col-hr {
+        border: 1px solid black;
+        border-width: 1px;
+        width: 50px;
+      }
+      .col2-hr {
+        border: 1px solid #98bf78;
+        width: 70px;
+        margin: 0;
+      }
+
+      .btn {
+        background-color: #98bf78;
+        color: white;
+        border-radius: 2px;
+        height: 50px;
+        width: 150px;
+        margin: 20px 0;
+        margin-bottom: 80px;
+        border: 0;
+        box-shadow: 0 0 2px white;
+      }
+      .col5-btn {
+        background-color: #98bf78;
+        color: white;
+        border-radius: 2px;
+        height: 50px;
+        width: 150px;
+        margin: 20px 0;
+        border: 0;
+        box-shadow: 0 0 2px white;
+      }
+      .container {
+        margin: 70px 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .col1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0;
+      }
+      .col2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+      }
+      .col3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0;
+        width: 100%;
+      }
+      .col3-h {
+        border-bottom: 1px solid #98bf78;
+        padding-bottom: 10px;
+        color: #98bf78;
+        font-size: 15px;
+      }
+      .col1-img {
+        margin: 0 100px;
+        height: auto;
+        width: 100%;
+      }
+      .col2-img {
+        height: 300px;
+        width: 300px;
+        margin: 10px;
+      }
+      .col3-img {
+        height: 50px;
+        width: 150px;
+      }
+      .col3-a {
+        margin: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #98bf78;
+      }
+      .col2-row1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .col3-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        /* align-items: flex-start; */
+      }
+      .col3-para {
+        justify-content: left;
+        font-family: "Open Sans", sans-serif;
+      }
+      .col3-footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .col2-r1-d1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        /* height: 100px; */
+        width: 300px;
+        margin: 20px;
+      }
+      .col2-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .col4-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 10px;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .col5-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+      }
+      .col5-ft {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        /* padding: 10px; */
+        height: 400px;
+        width: 300px;
+        margin: 20px;
+      }
+      .para {
+        line-height: 1.5px;
+      }
+      .parent {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .hr-end {
+        border: 1px solid grey;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="nav">
+        <div class="nav-left">
+          <a href=""
+            ><img class="img-icon" src="picture/list-btn.png" alt="list-btn" />
+          </a>
+          <h2>KMS Hakkim Biriyani Factory</h2>
+        </div>
+        <div class="nav-right">
+          <img class="img-icon" src="picture/list-icon.png" alt="get quote" />
+          <h3>Get Quote</h3>
+          <br />
+          <img class="img-icon" src="picture/call.png" alt="call-icon " />
+          <h3>Call</h3>
+          <img
+            class="img-icon"
+            src="picture/direction-icon.png"
+            alt="get-direction"
+          />
+          <h3>Get Direction</h3>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col1">
+          <h1 class="h1">KMS Hakkim Biriyani Factory</h1>
+          <p class="para">Restaurant in Tiruchirappalli</p>
+          <p class="para">Open today until 22:00</p>
+          <button class="btn">GET QUOTE</button>
+          <img class="col1-img" src="picture/img1.jpg" alt="image1" />
+        </div>
+        <div class="col2">
+          <hr class="col-hr" />
+          <h3>Updates</h3>
+          <div class="col2-row1">
+            <div class="col2-r1-d1">
+              <img class="col2-img" src="picture/img2.jpg" alt="" />
+              <a href="">Posted on Nov 30, 2019</a>
+              <p>ALL YOUR SPECIAL OCCASION... 😀😀😀😍🥰</p>
+              <p>
+                WE DO IT ALL LIKE BIRTHDAY PARTIES, WEDDING PARTIES, SPECIAL
+                OCCASION & Wedding Catering | Outdoor Catering | Buffet Service
+                KMS Hakkim Biriyani Factory Trichy
+              </p>
+              <p>
+                KMS Hakkim Kalyana Biriyani Factory Specialist in Pasavu
+                Biriyani #8, Kems Town, Muthaliyarsathi...
+              </p>
+              <a href="">Read More</a>
+              <a href=""> CALL NOW</a>
+              <hr class="col2-hr" />
+            </div>
+            <div class="col2-r1-d1">
+              <img class="col2-img" src="picture/img3.jpg" alt="" />
+              <a href="">Posted on Nov 30, 2019</a>
+              <p>ALL YOUR SPECIAL OCCASION... 😀😀😀😍🥰</p>
+              <p>
+                WE DO IT ALL LIKE BIRTHDAY PARTIES, WEDDING PARTIES, SPECIAL
+                OCCASION & Wedding Catering | Outdoor Catering | Buffet Service
+                KMS Hakkim Biriyani Factory Trichy
+              </p>
+              <p>
+                KMS Hakkim Kalyana Biriyani Factory Specialist in Pasavu
+                Biriyani #8, Kems Town, Muthaliyarsathi...
+              </p>
+              <a href="">Read More</a>
+              <a href=""> CALL NOW</a>
+              <hr class="col2-hr" />
+            </div>
+            <div class="col2-r1-d1">
+              <img class="col2-img" src="picture/img4.jpg" alt="" />
+              <a href="">Posted on Nov 30, 2019</a>
+              <p>ALL YOUR SPECIAL OCCASION... 😀😀😀😍🥰</p>
+              <p>
+                WE DO IT ALL LIKE BIRTHDAY PARTIES, WEDDING PARTIES, SPECIAL
+                OCCASION & Wedding Catering | Outdoor Catering | Buffet Service
+                KMS Hakkim Biriyani Factory Trichy
+              </p>
+              <p>
+                KMS Hakkim Kalyana Biriyani Factory Specialist in Pasavu
+                Biriyani #8, Kems Town, Muthaliyarsathi...
+              </p>
+              <a href="">Read More</a>
+              <a href=""> CALL NOW</a>
+              <hr class="col2-hr" />
+            </div>
+            <div class="col2-r1-d1">
+              <img class="col2-img" src="picture/img5.jpg" alt="" />
+              <a href="">Posted on Nov 30, 2019</a>
+              <p>ALL YOUR SPECIAL OCCASION... 😀😀😀😍🥰</p>
+              <p>
+                WE DO IT ALL LIKE BIRTHDAY PARTIES, WEDDING PARTIES, SPECIAL
+                OCCASION & Wedding Catering | Outdoor Catering | Buffet Service
+                KMS Hakkim Biriyani Factory Trichy
+              </p>
+              <p>
+                KMS Hakkim Kalyana Biriyani Factory Specialist in Pasavu
+                Biriyani #8, Kems Town, Muthaliyarsathi...
+              </p>
+              <a href="">Read More</a>
+              <a href=""> CALL NOW</a>
+              <hr class="col2-hr" />
+            </div>
+            <div class="col2-r1-d1">
+              <img class="col2-img" src="picture/img6.jpg" alt="" />
+              <a href="">Posted on Nov 30, 2019</a>
+              <p>ALL YOUR SPECIAL OCCASION... 😀😀😀😍🥰</p>
+              <p>
+                WE DO IT ALL LIKE BIRTHDAY PARTIES, WEDDING PARTIES, SPECIAL
+                OCCASION & Wedding Catering | Outdoor Catering | Buffet Service
+                KMS Hakkim Biriyani Factory Trichy
+              </p>
+              <p>
+                KMS Hakkim Kalyana Biriyani Factory Specialist in Pasavu
+                Biriyani #8, Kems Town, Muthaliyarsathi...
+              </p>
+              <a href="">Read More</a>
+              <a href=""> CALL NOW</a>
+              <hr class="col2-hr" />
+            </div>
+            <div class="col2-r1-d1">
+              <img class="col2-img" src="picture/img7.jpg" alt="" />
+              <a href="">Posted on Nov 30, 2019</a>
+              <p>ALL YOUR SPECIAL OCCASION... 😀😀😀😍🥰</p>
+              <p>
+                WE DO IT ALL LIKE BIRTHDAY PARTIES, WEDDING PARTIES, SPECIAL
+                OCCASION & Wedding Catering | Outdoor Catering | Buffet Service
+                KMS Hakkim Biriyani Factory Trichy
+              </p>
+              <p>
+                KMS Hakkim Kalyana Biriyani Factory Specialist in Pasavu
+                Biriyani #8, Kems Town, Muthaliyarsathi...
+              </p>
+              <a href="">Read More</a>
+              <a href=""> CALL NOW</a>
+              <hr class="col2-hr" />
+            </div>
+            <div class="col2-r1-d1">
+              <img class="col2-img" src="picture/img8.jpg" alt="" />
+              <a href="">Posted on Nov 30, 2019</a>
+              <p>ALL YOUR SPECIAL OCCASION... 😀😀😀😍🥰</p>
+              <p>
+                WE DO IT ALL LIKE BIRTHDAY PARTIES, WEDDING PARTIES, SPECIAL
+                OCCASION & Wedding Catering | Outdoor Catering | Buffet Service
+                KMS Hakkim Biriyani Factory Trichy
+              </p>
+              <p>
+                KMS Hakkim Kalyana Biriyani Factory Specialist in Pasavu
+                Biriyani #8, Kems Town, Muthaliyarsathi...
+              </p>
+              <a href="">Read More</a>
+              <a href=""> CALL NOW</a>
+              <hr class="col2-hr" />
+            </div>
+            <div class="col2-r1-d1">
+              <img class="col2-img" src="picture/img9.jpg" alt="" />
+              <a href="">Posted on Nov 30, 2019</a>
+              <p>ALL YOUR SPECIAL OCCASION... 😀😀😀😍🥰</p>
+              <p>
+                WE DO IT ALL LIKE BIRTHDAY PARTIES, WEDDING PARTIES, SPECIAL
+                OCCASION & Wedding Catering | Outdoor Catering | Buffet Service
+                KMS Hakkim Biriyani Factory Trichy
+              </p>
+              <p>
+                KMS Hakkim Kalyana Biriyani Factory Specialist in Pasavu
+                Biriyani #8, Kems Town, Muthaliyarsathi...
+              </p>
+              <a href="">Read More</a>
+              <a href=""> CALL NOW</a>
+              <hr class="col2-hr" />
+            </div>
+            <div class="col2-r1-d1">
+              <img class="col2-img" src="picture/img10.jpg" alt="" />
+              <a href="">Posted on Nov 30, 2019</a>
+              <p>ALL YOUR SPECIAL OCCASION... 😀😀😀😍🥰</p>
+              <p>
+                WE DO IT ALL LIKE BIRTHDAY PARTIES, WEDDING PARTIES, SPECIAL
+                OCCASION & Wedding Catering | Outdoor Catering | Buffet Service
+                KMS Hakkim Biriyani Factory Trichy
+              </p>
+              <p>
+                KMS Hakkim Kalyana Biriyani Factory Specialist in Pasavu
+                Biriyani #8, Kems Town, Muthaliyarsathi...
+              </p>
+              <a href="">Read More</a>
+              <a href=""> CALL NOW</a>
+              <hr class="col2-hr" />
+            </div>
+          </div>
+          <div class="col2-footer">
+            <a href="">VIEW ALL</a>
+            <hr class="col2-hr" />
+          </div>
+        </div>
+        <div class="col3">
+          <hr class="col-hr" />
+          <h4>TESTIMONIALS</h4>
+          <div class="col2-row1">
+            <div class="col2-r1-d1">
+              <div class="col3-row">
+                <img
+                  class="col3-img"
+                  src="picture/star.png"
+                  alt="star-rating"
+                />
+                <p>2 months ago</p>
+              </div>
+              <p class="col3-para">
+                "Trichy's Most Underrated Biryani isthabanam. Personally I Like
+                this Tasty Chicken Biryani. Really Biryani and thandoori is my
+                favourite in Your Shop. it's mind blowing."
+              </p>
+              <a href="">- Subash M</a>
+            </div>
+            <div class="col2-r1-d1">
+              <div class="col3-row">
+                <img
+                  class="col3-img"
+                  src="picture/star.png"
+                  alt="star-rating"
+                />
+                <p>5 months ago</p>
+              </div>
+              <p class="col3-para">
+                "Best briyani take away factory. Yes the largest production hub.
+                Costs ₹2400/- per bucket mutton briyani (zeraga samba rice) will
+                sufficent for 10 people. Half bucket, quarter-to-full (3/4)
+                bucket, and even smaller portions also available in kgs."
+              </p>
+              <a href="">- Arun A</a>
+            </div>
+            <div class="col2-r1-d1">
+              <div class="col3-row">
+                <img
+                  class="col3-img"
+                  src="picture/star.png"
+                  alt="star-rating"
+                />
+                <p>5 months ago</p>
+              </div>
+              <p class="col3-para">
+                "Truly the Factory !!!! 🏭That's one really really big kitchen I
+                have ever seen and one of the yummiest briyani in trichy"
+              </p>
+              <a href="">- Karthy P</a>
+            </div>
+          </div>
+          <div class="col3-footer">
+            <a class="col3-a" href="">WRITE A REVIEW</a>
+            <a class="col3-a" href=""> READ MORE</a>
+          </div>
+        </div>
+        <!-- column 4 -->
+        <div class="col3">
+          <hr class="col-hr" />
+          <h4>GALLERY</h4>
+          <div class="col4-row">
+            <img class="col2-img" src="picture/img11.jpg" alt="" />
+            <img class="col2-img" src="picture/img12.jpg" alt="" />
+            <img class="col2-img" src="picture/img13.jpg" alt="" />
+            <img class="col2-img" src="picture/img14.jpg" alt="" />
+            <img class="col2-img" src="picture/img15.jpg" alt="" />
+            <img class="col2-img" src="picture/img16.jpg" alt="" />
+            <img class="col2-img" src="picture/img17.jpg" alt="" />
+            <img class="col2-img" src="picture/img12.jpg" alt="" />
+          </div>
+        </div>
+        <!-- column 5 -->
+        <div class="col3">
+          <hr class="col-hr" />
+          <h4>CONTACT US</h4>
+          <div>
+            <a href="https://g.page/kms-hakkim-biriyani-factory?share">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1060684942163!2d78.69329861480105!3d10.803187692303375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5a9ce24e791%3A0xf6c5440a2c1e1212!2sKMS%20Hakkim%20Biriyani%20Factory!5e0!3m2!1sen!2sin!4v1633325714807!5m2!1sen!2sin"
+                width="1000"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="eager"
+              ></iframe>
+            </a>
+            <div class="col5-footer">
+              <div class="col5-ft">
+                <h3>Contact</h3>
+                <button class="col5-btn">CALL NOW</button>
+                <p>0431 270 0065</p>
+              </div>
+              <div class="col5-ft">
+                <h3>Address</h3>
+                <button class="col5-btn">GET DIRECTION</button>
+                <p class="col5-para">
+                  No.8, Goods Shed Road Mudaliyar Chathiram,
+                  Tiruchirappalli,Tamil Nadu 620001 India.
+                </p>
+              </div>
+              <div class="col5-ft">
+                <h3>Opening Hours</h3>
+                <p class="para">Mon: 11:00 am – 10:00 pm</p>
+                <p class="para">Tue: 11:00 am – 10:00 pm</p>
+                <p class="para">Wed: 11:00 am – 10:00 pm</p>
+                <p class="para">Thu: 11:00 am – 10:00 pm</p>
+                <p class="para">Fri: 11:00 am – 10:00 pm</p>
+                <p class="para">Sat: 11:00 am – 10:00 pm</p>
+                <p class="para">Sun: 11:00 am – 10:00 pm</p>
+              </div>
+            </div>
+            <hr class="hr-end" />
+          </div>
+        </div>
+      </div>
+      <!-- container -->
+    </div>
+    <!-- parent -->
+  </body>
+</html>
