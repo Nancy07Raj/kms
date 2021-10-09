@@ -1,0 +1,23 @@
+{
+  "name": "kms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage":"https://nancy07raj.github.io/kms/",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nancy07Raj/kms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nancy07Raj/kms/issues"
+  },
+   "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
